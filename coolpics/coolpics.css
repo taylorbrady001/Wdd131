@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
+:root {
+  --primary-color: #52489c;
+  --secondary-color: #59c3c3;
+  --accent-color: #f45b69;
+  --text-dark: #333;
+  --text-light: #ebebeb;
+  --primary-font: Arial, Helvetica, sans-serif;
+  --secondary-font: Mooli, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--primary-font);
+  font-size: 1.2em;
+  color: var(--text-dark);
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+header,
+main,
+footer {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+}
+
+h1 {
+  font-family: var(--secondary-font);
+  font-size: 2em;
+  margin: 0.5em 0;
+}
+
+button#menu {
+  background: none;
+  border: none;
+  color: var(--text-light);
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-top: 0.5em;
+  display: block;
+}
+
+nav {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+  margin-top: 0.5em;
+}
+
+nav.open {
+  display: flex;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--accent-color);
+}
+
+main h2 {
+  font-family: var(--secondary-font);
+  font-size: 1.8em;
+  margin: 1rem 0;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.gallery img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border: 2px solid var(--secondary-color);
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  padding: 1rem;
+  margin-top: auto;
+}
+
+@media screen and (min-width: 700px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav {
+    display: flex !important;
+    flex-direction: row;
+    gap: 1em;
+  }
+
+  button#menu {
+    display: none;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
