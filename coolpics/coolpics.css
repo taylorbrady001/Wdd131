@@ -7,7 +7,7 @@
   --text-dark: #333;
   --text-light: #ebebeb;
   --primary-font: Arial, Helvetica, sans-serif;
-  --secondary-font: Mooli, sans-serif;
+  --secondary-font: 'Mooli', sans-serif;
 }
 
 * {
@@ -50,7 +50,7 @@ h1 {
   margin: 0.5em 0;
 }
 
-button#menu {
+button#menuButton {
   background: none;
   border: none;
   color: var(--text-light);
@@ -124,9 +124,10 @@ footer {
     display: flex !important;
     flex-direction: row;
     gap: 1em;
+    margin-top: 0;
   }
 
-  button#menu {
+  button#menuButton {
     display: none;
   }
 
