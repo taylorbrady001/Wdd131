@@ -44,31 +44,70 @@ header {
 }
 
 .articles {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  gap: 2rem;
   max-width: 1000px;
   margin: 2rem auto;
   padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 article {
   display: grid;
-  grid-template-columns: 100px 1fr;
-  gap: 1rem;
+  grid-template-columns: 140px 1fr;
+  gap: 1.5rem;
   border-bottom: 1px solid var(--gold);
   padding: 1rem 0;
+  align-items: center;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 2px solid var(--gold);
+  padding-right: 1rem;
+  text-align: right;
+  font-size: 0.9rem;
+  color: #666;
+  min-width: 140px;
+  gap: 0.2rem;
 }
 
 article .date {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.author {
+  margin: 0;
+}
+
+.content h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: normal;
+}
+
+.content img {
+  display: block;
+  width: 100px;
+  height: auto;
+  margin: 0 0 1rem 0;
+  border-radius: 4px;
+}
+
+.content p {
+  margin: 0.5rem 0;
 }
 
 .filters {
   background-color: #f8f8f8;
   padding: 1rem;
   border: 1px solid #ccc;
+  max-width: 1000px;
+  margin: 2rem auto;
 }
 
 .skiptocontent a {
@@ -83,4 +122,10 @@ article .date {
 
 .skiptocontent a:focus {
   top: 0;
+}
+
+.stars {
+  color: goldenrod;
+  font-size: 1.2rem;
+  margin-top: 0.3rem;
 }
