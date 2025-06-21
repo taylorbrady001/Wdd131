@@ -1,11 +1,9 @@
-// main.js
 import recipes from './recipes.mjs';
 
 document.addEventListener('DOMContentLoaded', () => {
   const recipe = recipes[0];
   const container = document.getElementById('recipe-display');
 
-  // Build rating stars with accessible aria-label
   function buildRatingStars(rating) {
     const fullStars = Math.floor(rating);
     const emptyStars = 5 - fullStars;
