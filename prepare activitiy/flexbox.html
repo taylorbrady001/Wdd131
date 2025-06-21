@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flexbox Exercise</title>
+  <link rel="stylesheet" href="flexbox.css" />
+</head>
+<body>
+  <header>
+    <h1>Flexbox Exercise</h1>
+    <nav>
+      <ul class="main-nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">One</a></li>
+        <li><a href="#">Two</a></li>
+        <li><a href="#">Three</a></li>
+        <li><a href="#">Four</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="media-card-container">
+      <h2>A Media Card Example</h2>
+      <section class="media-card">
+        <div class="media-card__image">
+          <img src="https://byui-cit.github.io/learning-modules/img/bechler-topo.png" alt="Topo Map" />
+        </div>
+        <div class="media-card__content">
+          <h3>Bechler Falls</h3>
+          <p>This is an example of a media card using Flexbox. On wide screens, the image is side-by-side with the text.</p>
+        </div>
+      </section>
+    </section>
+
+    <section class="gallery-container">
+      <h2>A Gallery Example</h2>
+      <div class="gallery">
+        <section class="media-card">
+          <div class="media-card__image">
+            <img src="https://byui-cit.github.io/learning-modules/img/bechler-topo.png" alt="Map 1" />
+          </div>
+          <div class="media-card__content">
+            <h3>Card One</h3>
+            <p>Example card layout using Flexbox.</p>
+          </div>
+        </section>
+
+        <section class="media-card">
+          <div class="media-card__image">
+            <img src="https://byui-cit.github.io/learning-modules/img/bechler-topo.png" alt="Map 2" />
+          </div>
+          <div class="media-card__content">
+            <h3>Card Two</h3>
+            <p>Each card adapts based on screen size.</p>
+          </div>
+        </section>
+
+        <section class="media-card">
+          <div class="media-card__image">
+            <img src="https://byui-cit.github.io/learning-modules/img/bechler-topo.png" alt="Map 3" />
+          </div>
+          <div class="media-card__content">
+            <h3>Card Three</h3>
+            <p>Flexbox helps stack or tile cards dynamically.</p>
+          </div>
+        </section>
+
+        <section class="media-card">
+          <div class="media-card__image">
+            <img src="https://byui-cit.github.io/learning-modules/img/bechler-topo.png" alt="Map 4" />
+          </div>
+          <div class="media-card__content">
+            <h3>Card Four</h3>
+            <p>Use media queries to fine-tune layout behavior.</p>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
