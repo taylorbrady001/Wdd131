@@ -40,7 +40,6 @@ function recipeTemplate(recipe) {
 
 function renderRecipes(recipeList) {
   const container = document.getElementById('recipe-display');
-  if (!container) return;
   container.innerHTML = recipeList.map(recipeTemplate).join('');
 }
 
@@ -50,8 +49,8 @@ function filterRecipes(query) {
     return (
       recipe.name.toLowerCase().includes(query) ||
       recipe.description.toLowerCase().includes(query) ||
-      recipe.recipeIngredient.find(ing => ing.toLowerCase().includes(query)) ||
-      recipe.tags.find(tag => tag.toLowerCase().includes(query))
+      recipe.recipeIngredient.some(ing => ing.toLowerCase().includes(query)) ||
+      recipe.tags.some(tag => tag.toLowerCase().includes(query))
     );
   }).sort((a, b) => a.name.localeCompare(b.name));
 }
