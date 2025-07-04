@@ -129,13 +129,6 @@ footer p {
   margin-bottom: 0.5rem;
 }
 
-.social {
-  margin-top: 0.5rem;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-
 @media (min-width: 600px) {
   main {
     display: flex;
