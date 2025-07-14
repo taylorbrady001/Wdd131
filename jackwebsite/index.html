@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SpaWS Grooming Collection</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="logo">
+        <img src="assets/logo.png" alt="SpaWS Grooming Logo">
+        <span class="subtitle">GROOMING</span>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/services">Services</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/faqs">FAQs</a>
+        <a href="/memberships">Memberships</a>
+        <a href="/book">Book a Groomer</a>
+        <a href="tel:+1234567890">Call Us</a>
+        <a href="/cart" class="cart-icon" aria-label="Cart">🛒</a>
+      </div>
+
+      <div class="nav-toggle" onclick="toggleNav()">☰</div>
+    </div>
+  </nav>
+
+  <!-- Carousel -->
+  <section class="carousel">
+    <div class="carousel-track" id="carouselTrack">
+      <img src="assets/slide1.jpg" alt="Slide 1">
+      <img src="assets/slide2.jpg" alt="Slide 2">
+      <img src="assets/slide3.jpg" alt="Slide 3">
+    </div>
+    <div class="carousel-nav">
+      <span class="dot active" onclick="goToSlide(1)"></span>
+      <span class="dot" onclick="goToSlide(2)"></span>
+      <span class="dot" onclick="goToSlide(3)"></span>
+    </div>
+    <button class="carousel-btn prev" onclick="prevSlide()">❮</button>
+    <button class="carousel-btn next" onclick="nextSlide()">❯</button>
+  </section>
+
+<!-- Pricing Section -->
+<section class="pricing-section">
+  <h2 class="section-title">Pricing</h2>
+  <div class="pricing-grid">
+    <!-- One-Time -->
+    <div class="pricing-card dark">
+      <h3>One-Time Self-Service</h3>
+      <p>
+        Make your dog’s bath time a hassle-free 
+        and enjoyable experience with our self-service
+         dog wash! Our state-of-the-art facilities have everything 
+         you need to give your furry friend a professional-quality 
+         bath, from shampoos and conditioners to towels and dryers. 
+         Our friendly staff is always available to offer guidance and 
+         assistance, so you can feel confident in your dog washing abilities.
+          Your pup will leave feeling and smelling great, and you’ll have peace
+           of mind knowing that their bath was done with care and expertise. Come
+            visit us today and give your dog the spa treatment they deserve!
+      </p>
+      <div class="price-tag">$15</div>
+    </div>
+
+    <!-- Unlimited -->
+    <div class="pricing-card light">
+      <h3>Unlimited Self-Service</h3>
+      <p>
+        Our self-service dog wash subscription lets you pamper your pooch with unlimited washes!
+         Our state-of-the-art facilities are designed to make bath time stress-free and enjoyable
+          for both you and your furry friend. With all the supplies you need right at your fingertips,
+           including shampoos, conditioners, towels, and dryers, you can give your pup a professional-quality 
+           bath whenever you like. Our friendly staff is always available to offer guidance and assistance, so
+            you can feel confident in your dog washing abilities. Plus, your pup will love how clean and fresh 
+            they smell after each visit.
+      </p>
+      <p><em>Each additional dog is $10/month</em></p>
+      <div class="price-tag">$19<span>/month</span></div>
+    </div>
+  </div>
+</section>
+
+  <!-- Page Header -->
+  <header>
+    <h1>Our Bestsellers</h1>
+    <p>Grooming products your pets will love</p>
+  </header>
+
+  <!-- Product Grid -->
+  <!-- Product Grid -->
+<section class="product-grid">
+
+  <!-- Product 1 -->
+  <div class="product-card">
+    <div class="product-image">
+      <img src="assets/product1.jpg" alt="WilderDog PawJam">
+    </div>
+    <div class="product-info">
+      <h2>WilderDog PawJam</h2>
+      <p>For all coat types • 12oz</p>
+      <div class="product-footer">
+        <span class="price">$18.00</span>
+        <button class="btn" onclick="addToCart('WilderDog PawJam')">Shop</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 2 -->
+    <div class="product-card">
+    <div class="product-image">
+      <img src="assets/wilderdogcollar.jpg" alt="wilderdogcollar">
+    </div>
+    <div class="product-info">
+      <h2>Wilder Dog Collar</h2>
+      <p>Collar for Mid-Size dog</p>
+      <div class="product-footer">
+        <span class="price">$29.00</span>
+        <button class="btn" onclick="addToCart('Gentle Groom Conditioner')">Shop</button>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Product 3 -->
+   <div class="product-card">
+    <div class="product-image">
+      <img src="assets/wilderdogleash.jpg" alt="Wilder Dog Leash">
+    </div>
+    <div class="product-info">
+      <h2>Wilder Dog Leash</h2>
+      <p>Leash</p>
+      <div class="product-footer">
+        <span class="price">$32.00</span>
+        <button class="btn" onclick="addToCart('FreshPaw Deodorizing Spray')">Shop</button>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Product 4 -->
+  <div class="product-card">
+    <div class="product-image">
+      <img src="assets/product4.jpg" alt="Dog By Dr Lisa Dog Wash">
+    </div>
+    <div class="product-info">
+      <h2>Dog By Dr Lisa Dog Wash</h2>
+      <p>Gentle wash • 500ml</p>
+      <div class="product-footer">
+        <span class="price">$42.00</span>
+        <button class="btn" onclick="addToCart('Dog Wash')">Shop</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 5 -->
+   <div class="product-card">
+    <div class="product-image">
+      <img src="assets/product2.jpg" alt="PawFume">
+    </div>
+    <div class="product-info">
+      <h2>PawFume</h2>
+      <p>Shampoo • 8oz</p>
+      <div class="product-footer">
+        <span class="price">$14.99</span>
+        <button class="btn" onclick="addToCart('PawFume')">Shop</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 6 -->
+  <div class="product-card">
+    <div class="product-image">
+      <img src="assets/product3.jpg" alt="Friday's Dog Shampoo">
+    </div>
+    <div class="product-info">
+      <h2>Friday's Dog Shampoo</h2>
+      <p>For all coat types • 12oz</p>
+      <div class="product-footer">
+        <span class="price">$22.99</span>
+        <button class="btn" onclick="addToCart('Fridays Dog Shampoo')">Shop</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 7 -->
+  <div class="product-card">
+    <div class="product-image">
+      <img src="assets/dogbags.jpg" alt="Dogs bags">
+    </div>
+    <div class="product-info">
+      <h2>Dog Bags</h2>
+      <p>40 count</p>
+      <div class="product-footer">
+        <span class="price">$8.99</span>
+        <button class="btn" onclick="addToCart('Cozy Coat Detangler')">Shop</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 8 -->
+  <div class="product-card">
+    <div class="product-image">
+      <img src="assets/fablegreentoy.jpg" alt="fable green toy">
+    </div>
+    <div class="product-info">
+      <h2>Green Fable Toy</h2>
+      <p>Chew-Resistent</p>
+      <div class="product-footer">
+        <span class="price">$23.00</span>
+        <button class="btn" onclick="addToCart('Pupper Polish Mist')">Shop</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 9 -->
+  <div class="product-card">
+    <div class="product-image">
+      <img src="assets/fabletoywhite.jpg" alt="White Fable Toy">
+    </div>
+    <div class="product-info">
+      <h2>While Fable Toy</h2>
+      <p>Chew-Resistent</p>
+      <div class="product-footer">
+        <span class="price">$55.00</span>
+        <button class="btn" onclick="addToCart('Soothing Paw Balm')">Shop</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 10 -->
+  <div class="product-card">
+    <div class="product-image">
+      <img src="assets/in my dog mom era.jpg" alt="T-Shirt">
+    </div>
+    <div class="product-info">
+      <h2>In my Dog Mom Era T-Shirt</h2>
+      <p>T-Shirt</p>
+      <div class="product-footer">
+        <span class="price">$19.00</span>
+        <button class="btn" onclick="addToCart('Tangle-Free Spray')">Shop</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 11 -->
+  <div class="product-card">
+    <div class="product-image">
+      <img src="assets/milkbone.jpg" alt="milkbone dog treats">
+    </div>
+    <div class="product-info">
+      <h2>Milkbone Dog Treats</h2>
+      <p>Small-Dog Treats</p>
+      <div class="product-footer">
+        <span class="price">$15.00</span>
+        <button class="btn" onclick="addToCart('Bright Pup Shampoo')">Shop</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product 12 -->
+  <div class="product-card">
+    <div class="product-image">
+      <img src="assets/mightypawroller.jpg" alt="mightypawroller">
+    </div>
+    <div class="product-info">
+      <h2>Mighty Paw Roller</h2>
+      <p>Relaxing scent • 12oz</p>
+      <div class="product-footer">
+        <span class="price">$5.00</span>
+        <button class="btn" onclick="addToCart('Lavender Calming Shampoo')">Shop</button>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-content">
+    <p>&copy; 2025 SpaWS Grooming. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="/privacy">Privacy Policy</a>
+      <a href="/terms">Terms of Service</a>
+      <a href="/contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
