@@ -1,3 +1,4 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -34,7 +35,6 @@ body {
   color: #3B0D52;
 }
 
-/* CAROUSEL */
 .carousel {
   position: relative;
   width: 100%;
@@ -97,11 +97,10 @@ body {
   line-height: 1.6;
 }
 
-/* FEATURE CARDS */
 .feature-grid {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 2.5rem;
   padding: 2rem;
   flex-wrap: wrap;
 }
@@ -130,8 +129,8 @@ body {
   height: 200px;
   object-fit: contain;
   border-radius: 8px;
-  background-color: #111; 
-  padding: 0.5rem;        
+  background-color: #111;
+  padding: 0.5rem;
   display: block;
   margin: 0 auto;
 }
@@ -140,9 +139,6 @@ body {
   margin-top: 1rem;
   font-size: 1.5rem;
   color: #fff;
-}
-.feature-grid {
-  gap: 2.5rem;
 }
 
 .scroll-section {
@@ -174,34 +170,12 @@ body {
   background-color: #cc9900;
   transform: rotate(45deg);
 }
+
 .footer {
   text-align: center;
   padding: 1rem;
   background-color: rgba(0, 0, 0, 0.8);
   margin-top: 2rem;
-}
-.lore-sections {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 2rem;
-  flex-wrap: wrap;
-}
-
-.lore-card {
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 1rem;
-  width: 250px;
-  text-align: center;
-}
-
-.lore-card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 5px;
 }
 
 .lore-info {
